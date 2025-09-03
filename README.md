@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Let's Get Moving Dubai
+
+A professional moving company website built with Next.js 15, featuring a modern design with mascot branding and comprehensive moving services.
+
+## Features
+
+- 🚚 **Professional Moving Services**: Residential, office, packing, storage, junk removal, and specialty moving
+- 🎨 **Modern Design**: Clean, responsive design with mascot branding
+- 📱 **Mobile Responsive**: Optimized for all devices
+- ⚡ **Fast Performance**: Built with Next.js 15 and optimized for speed
+- 🎯 **SEO Optimized**: Structured data and meta tags for better search visibility
+- 📞 **Contact Integration**: WhatsApp integration and contact forms
+
+## Tech Stack
+
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Language**: TypeScript
+- **Deployment**: Render.com
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.18.2 or higher
+- npm 9.0.0 or higher
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Sir-shkolnik/Dubai.git
+cd Dubai/lgm-dubai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is configured for automatic deployment to Render.com using a Blueprint.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Manual Deployment to Render.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Connect GitHub Repository**:
+   - Go to [Render.com](https://render.com)
+   - Sign in and go to "Blueprints"
+   - Click "New Blueprint Instance"
+   - Connect your GitHub repository
 
-## Deploy on Vercel
+2. **Automatic Configuration**:
+   - Render will detect the `render.yaml` file
+   - The service will be configured automatically
+   - Click "Apply" to deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Environment Variables**:
+   - `NODE_VERSION`: 18.18.2
+   - `NODE_ENV`: production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Automatic Deployment
+
+Every push to the `main` branch will automatically trigger a new deployment on Render.com.
+
+## Project Structure
+
+```
+lgm-dubai/
+├── public/                 # Static assets
+│   ├── logo0.png          # Main logo
+│   ├── layer-10.svg       # Footer logo
+│   ├── chartchte image icon logo LGM.png  # Mascot logo
+│   ├── Background image.png  # Hero background
+│   └── gallery-thumbnail-*.png  # Customer photos
+├── src/
+│   ├── app/               # Next.js app router
+│   │   ├── page.tsx       # Home page
+│   │   ├── about/         # About page
+│   │   ├── contact/       # Contact page
+│   │   ├── pricing/       # Pricing page
+│   │   └── areas/         # Service areas
+│   ├── components/        # Reusable components
+│   └── lib/              # Utility functions
+├── render.yaml           # Render.com deployment config
+└── package.json         # Dependencies and scripts
+```
+
+## Services
+
+- **Residential Moving**: Apartments, villas, townhouses
+- **Office Relocation**: Weekend/evening moves, zero-downtime plans
+- **Professional Packing**: Export-grade materials and fragile wrapping
+- **Secure Storage**: Short/long-term climate-aware storage
+- **Junk Removal**: Pre/post-move declutter and eco-friendly disposal
+- **Specialty Items**: Pianos, safes, gym machines, pool tables, large art
+
+## Contact
+
+- **Email**: Sales@Letsgetmovingdubai.com
+- **Phone**: +971-56-142-9800
+- **Address**: 110 Umm Hurair Rd - Oud Metha, Al Fajer Complex, Dubai, UAE
+- **WhatsApp**: [Contact via WhatsApp](https://wa.me/971561429800)
+
+## License
+
+Copyright Reserved © 2025 letsgetmoving.ca
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
