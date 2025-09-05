@@ -160,7 +160,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <img src="/chartchte image icon logo LGM.png" alt="Let's Get Moving Dubai" className="h-12 w-auto" />
+            <img src="/LGM logo.png" alt="Let's Get Moving Dubai" className="h-12 w-auto" />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -201,7 +201,7 @@ export default function Home() {
           {/* Background Image */}
           <div className="absolute inset-0 opacity-20">
             <img 
-              src="/Background image.png" 
+              src="/LGM background_first picutre main page.png" 
               alt="Moving Background" 
               className="w-full h-full object-cover"
             />
@@ -455,7 +455,7 @@ export default function Home() {
               {/* Blog Post 1 */}
               <Card className="card-shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="aspect-video bg-muted relative">
-                  <img src="/dubai-city-skyline0.svg" alt="Dubai Skyline" className="w-full h-full object-cover" />
+                  <img src="/dubai city skyline.svg" alt="Dubai Skyline" className="w-full h-full object-cover" />
                   <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
                     #Moving Tips
                   </div>
@@ -553,7 +553,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative">
           {/* Logo Section */}
           <div className="text-center mb-12">
-            <img src="/layer-10.svg" alt="Let's Get Moving Dubai" className="h-16 w-auto mx-auto mb-4" />
+            <img src="/footer_image.png" alt="Let's Get Moving Dubai" className="h-16 w-auto mx-auto mb-4" />
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
