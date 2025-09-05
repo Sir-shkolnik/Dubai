@@ -10,6 +10,10 @@ services:
         value: 20.11.0
       - key: NODE_ENV
         value: production
+      - key: ESLINT_NO_DEV_ERRORS
+        value: true
+      - key: NEXT_TELEMETRY_DISABLED
+        value: 1
     healthCheckPath: /
     autoDeploy: true
     branch: main
