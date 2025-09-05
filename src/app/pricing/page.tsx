@@ -9,7 +9,7 @@ export default function PricingPage() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <img src="/lgm-logo.png" alt="Let's Get Moving Dubai" className="h-12 w-auto" />
+            <img src="/LGM logo.png" alt="Let's Get Moving Dubai" className="h-12 w-auto" />
           </Link>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -27,6 +27,12 @@ export default function PricingPage() {
             </Link>
             <Link href="/about" className="text-foreground hover:text-primary transition-colors">
               About
+            </Link>
+            <Link href="/blog" className="text-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <Link href="/faq" className="text-foreground hover:text-primary transition-colors">
+              FAQ
             </Link>
             <Button asChild className="bg-secondary hover:bg-secondary/90">
               <Link href="/contact">Get a Quote</Link>
@@ -71,7 +77,7 @@ export default function PricingPage() {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">2 Movers + Truck</CardTitle>
                   <CardDescription>Ideal for 1-2 bedroom apartments</CardDescription>
-                  <div className="text-4xl font-bold text-primary mt-4">AED 150</div>
+                  <div className="text-4xl font-bold text-primary mt-4">AED 120</div>
                   <div className="text-muted-foreground">per hour</div>
                 </CardHeader>
                 <CardContent>
@@ -109,7 +115,7 @@ export default function PricingPage() {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">3 Movers + Truck</CardTitle>
                   <CardDescription>Perfect for 2-3 bedroom apartments</CardDescription>
-                  <div className="text-4xl font-bold text-primary mt-4">AED 200</div>
+                  <div className="text-4xl font-bold text-primary mt-4">AED 160</div>
                   <div className="text-muted-foreground">per hour</div>
                 </CardHeader>
                 <CardContent>
@@ -142,7 +148,7 @@ export default function PricingPage() {
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl">4 Movers + Truck</CardTitle>
                   <CardDescription>Best for large apartments & villas</CardDescription>
-                  <div className="text-4xl font-bold text-primary mt-4">AED 250</div>
+                  <div className="text-4xl font-bold text-primary mt-4">AED 200</div>
                   <div className="text-muted-foreground">per hour</div>
                 </CardHeader>
                 <CardContent>
@@ -238,10 +244,10 @@ export default function PricingPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li>• Full packing service: AED 25 per hour per mover</li>
-                    <li>• Fragile item packing: AED 15 per item</li>
-                    <li>• Wardrobe boxes: AED 50 each</li>
-                    <li>• Specialty boxes: AED 30-80 each</li>
+                    <li>• Full packing service: AED 20 per hour per mover</li>
+                    <li>• Fragile item packing: AED 10 per item</li>
+                    <li>• Wardrobe boxes: AED 40 each</li>
+                    <li>• Specialty boxes: AED 25-60 each</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -253,10 +259,10 @@ export default function PricingPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li>• Short-term storage: AED 200 per month</li>
-                    <li>• Long-term storage: AED 150 per month</li>
-                    <li>• Climate-controlled: AED 300 per month</li>
-                    <li>• Pickup/delivery: AED 100 per trip</li>
+                    <li>• Short-term storage: AED 150 per month</li>
+                    <li>• Long-term storage: AED 120 per month</li>
+                    <li>• Climate-controlled: AED 250 per month</li>
+                    <li>• Pickup/delivery: AED 80 per trip</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -268,10 +274,10 @@ export default function PricingPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li>• Small items: AED 50-100</li>
-                    <li>• Furniture: AED 100-300</li>
-                    <li>• Electronics: AED 80-150</li>
-                    <li>• Full truck load: AED 500</li>
+                    <li>• Small items: AED 40-80</li>
+                    <li>• Furniture: AED 80-250</li>
+                    <li>• Electronics: AED 60-120</li>
+                    <li>• Full truck load: AED 400</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -283,10 +289,10 @@ export default function PricingPage() {
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li>• Piano moving: AED 500-1000</li>
-                    <li>• Safe moving: AED 300-800</li>
-                    <li>• Pool table: AED 400-600</li>
-                    <li>• Art & antiques: AED 200-500</li>
+                    <li>• Piano moving: AED 400-800</li>
+                    <li>• Safe moving: AED 250-600</li>
+                    <li>• Pool table: AED 300-500</li>
+                    <li>• Art & antiques: AED 150-400</li>
                   </ul>
                 </CardContent>
               </Card>

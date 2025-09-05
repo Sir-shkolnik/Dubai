@@ -85,34 +85,6 @@ const testimonials = [
   }
 ];
 
-// FAQ data
-const faqs = [
-  {
-    question: "Do you move in summer heat?",
-    answer: "Yes—crews rotate hydration breaks; items ride in covered trucks with climate control."
-  },
-  {
-    question: "How do you handle elevator permits?",
-    answer: "We coordinate with the building's facilities management and book time slots in advance."
-  },
-  {
-    question: "Do you offer packing only?",
-    answer: "Yes; materials included or billed at cost. We can pack everything or just fragile items."
-  },
-  {
-    question: "What insurance coverage do you provide?",
-    answer: "Standard handling coverage included; all-risk coverage available upon request."
-  },
-  {
-    question: "Do you move on weekends?",
-    answer: "Yes, we operate 7 days a week including weekends and evenings for your convenience."
-  },
-  {
-    question: "How far in advance should I book?",
-    answer: "We recommend booking at least 1-2 weeks in advance, though we can accommodate same-day moves when possible."
-  }
-];
-
 // JSON-LD Schema
 const jsonLd = {
   "@context": "https://schema.org",
@@ -178,6 +150,12 @@ export default function Home() {
             </Link>
             <Link href="/about" className="text-foreground hover:text-primary transition-colors">
               About
+            </Link>
+            <Link href="/blog" className="text-foreground hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <Link href="/faq" className="text-foreground hover:text-primary transition-colors">
+              FAQ
             </Link>
             <Button asChild className="bg-secondary hover:bg-secondary/90">
               <Link href="/contact">Get a Quote</Link>
@@ -437,107 +415,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Blog Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                OUR BLOGS
-              </h2>
-              <div className="flex justify-center">
-                <Link href="/blog" className="text-primary hover:text-primary/80 font-semibold">
-                  View All →
-                </Link>
-              </div>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Blog Post 1 */}
-              <Card className="card-shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
-                <div className="aspect-video bg-muted relative">
-                  <img src="/dubai city skyline.svg" alt="Dubai Skyline" className="w-full h-full object-cover" />
-                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                    #Moving Tips
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="text-sm text-muted-foreground mb-2">30.06.2025</div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">
-                    Moving with Babies and Toddlers: 11 Tips from Expert Movers
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    There's more to moving with babies and toddlers than just packing up nappies and toys.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Blog Post 2 */}
-              <Card className="card-shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
-                <div className="aspect-video bg-muted relative">
-                  <img src="/group-13213148960.svg" alt="Moving Tips" className="w-full h-full object-cover" />
-                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                    #Moving Tips
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="text-sm text-muted-foreground mb-2">30.06.2025</div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">
-                    Essential Packing Checklist for Your Dubai Move
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    Make sure you don't forget anything important when packing for your move in Dubai.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Blog Post 3 */}
-              <Card className="card-shadow hover:shadow-lg transition-all duration-300 overflow-hidden">
-                <div className="aspect-video bg-muted relative">
-                  <img src="/group-13213148940.svg" alt="Moving Guide" className="w-full h-full object-cover" />
-                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                    #Moving Tips
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="text-sm text-muted-foreground mb-2">30.06.2025</div>
-                  <h3 className="text-lg font-bold text-foreground mb-3">
-                    Dubai Moving Regulations: What You Need to Know
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    Understanding the local regulations and requirements for moving in Dubai.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-muted/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Common questions about moving in Dubai
-              </p>
-            </div>
-            
-            <div className="max-w-3xl mx-auto space-y-4">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="card-shadow hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{faq.question}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{faq.answer}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
 
       {/* Footer - Let's Get Moving Style */}
