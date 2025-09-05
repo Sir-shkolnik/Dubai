@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const dubaiAreas = [
   {
@@ -68,39 +70,7 @@ const dubaiAreas = [
 export default function AreasPage() {
   return (
     <>
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <img src="/lgm-logo.png" alt="Let's Get Moving Dubai" className="h-12 w-auto" />
-          </Link>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/#services" className="text-foreground hover:text-primary transition-colors">
-              Services
-            </Link>
-            <Link href="/#process" className="text-foreground hover:text-primary transition-colors">
-              Process
-            </Link>
-            <Link href="/pricing" className="text-foreground hover:text-primary transition-colors">
-              Pricing
-            </Link>
-            <Link href="/areas" className="text-foreground hover:text-primary transition-colors">
-              Areas
-            </Link>
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Button asChild className="bg-secondary hover:bg-secondary/90">
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
-          </nav>
-
-          <Button asChild variant="outline" size="sm">
-            <Link href="https://wa.me/971561429800">WhatsApp</Link>
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       <main className="min-h-screen">
         {/* Hero Section */}
@@ -281,59 +251,7 @@ export default function AreasPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-background py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="md:col-span-1">
-              <h3 className="text-2xl font-bold mb-4">Let's Get Moving — Dubai</h3>
-              <p className="text-muted-foreground mb-4">
-                Licensed & insured movers serving all Dubai communities.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><Link href="/about" className="hover:text-background transition-colors">About</Link></li>
-                <li><Link href="/areas" className="hover:text-background transition-colors">Areas We Serve</Link></li>
-                <li><Link href="/blog" className="hover:text-background transition-colors">Guides</Link></li>
-                <li><Link href="/careers" className="hover:text-background transition-colors">Careers</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                <li><Link href="/services/residential" className="hover:text-background transition-colors">Residential Moving</Link></li>
-                <li><Link href="/services/office" className="hover:text-background transition-colors">Office Relocation</Link></li>
-                <li><Link href="/services/packing" className="hover:text-background transition-colors">Packing Services</Link></li>
-                <li><Link href="/services/storage" className="hover:text-background transition-colors">Storage</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 text-muted-foreground">
-                <div>WhatsApp/Call: +971 56 142 9800</div>
-                <div>Email: hello@lgm-dubai.com</div>
-                <div>Hours: 8:00 AM - 8:00 PM</div>
-                <div>7 days a week</div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-muted-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="text-muted-foreground text-sm">
-              © 2024 Let's Get Moving Dubai. All rights reserved.
-            </div>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-muted-foreground hover:text-background transition-colors text-sm">Privacy Policy</Link>
-              <Link href="/terms" className="text-muted-foreground hover:text-background transition-colors text-sm">Terms of Service</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
