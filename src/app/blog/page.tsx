@@ -222,7 +222,6 @@ export default function BlogPage() {
             backgroundPosition: 'center',
             backgroundRepeat: 'repeat'
           }}></div>
-        </div>
         
         <div className="container mx-auto px-4 relative">
           {/* Logo Section */}
