@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Services data
 const services = [
@@ -128,50 +130,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Header - Let's Get Moving Style */}
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <img src="/LGM logo.png" alt="Let's Get Moving Dubai" className="h-12 w-auto" />
-          </Link>
-          
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#services" className="text-foreground hover:text-primary transition-colors">
-              Services
-            </Link>
-            <Link href="#process" className="text-foreground hover:text-primary transition-colors">
-              Process
-            </Link>
-            <Link href="/pricing" className="text-foreground hover:text-primary transition-colors">
-              Pricing
-            </Link>
-            <Link href="/areas" className="text-foreground hover:text-primary transition-colors">
-              Areas
-            </Link>
-            <Link href="/about" className="text-foreground hover:text-primary transition-colors">
-              About
-            </Link>
-            <Link href="/blog" className="text-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link href="/faq" className="text-foreground hover:text-primary transition-colors">
-              FAQ
-            </Link>
-            <Button asChild className="bg-secondary hover:bg-secondary/90">
-              <Link href="/contact">Get a Quote</Link>
-            </Button>
-          </nav>
-
-          <div className="flex items-center space-x-2">
-            <Button asChild variant="outline" size="sm" className="md:hidden">
-              <Link href="https://wa.me/971561429800">WhatsApp</Link>
-            </Button>
-            <Button asChild variant="outline" size="sm" className="hidden md:flex">
-              <Link href="https://wa.me/971561429800">WhatsApp</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* Hero Section - Let's Get Moving Style */}
@@ -210,7 +169,7 @@ export default function Home() {
                     <span className="font-semibold">4.8★ Rating</span>
                   </div>
                   <div className="hidden sm:block w-px h-4 bg-primary-foreground/30"></div>
-                  <div className="font-semibold">450,000+ Happy Customers Across North America</div>
+                  <div className="font-semibold">5,000+ Happy Customers in Dubai</div>
                   <div className="hidden sm:block w-px h-4 bg-primary-foreground/30"></div>
                   <div>Licensed & Insured</div>
                   <div className="hidden sm:block w-px h-4 bg-primary-foreground/30"></div>
@@ -417,84 +376,7 @@ export default function Home() {
 
       </main>
 
-      {/* Footer - Let's Get Moving Style */}
-      <footer className="bg-primary text-primary-foreground py-16 relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundRepeat: 'repeat'
-          }}></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative">
-          {/* Logo Section */}
-          <div className="text-center mb-12">
-            <img src="/footer_image.png" alt="Let's Get Moving Dubai" className="h-16 w-auto mx-auto mb-4" />
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Section */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">CONTACT US</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="text-xl">✉️</span>
-                  <span>Sales@Letsgetmovingdubai.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-xl">📞</span>
-                  <span>+971-56-142-9800</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <span className="text-xl">📍</span>
-                  <span>110 Umm Hurair Rd - Oud Metha<br />Al Fajer Complex<br />Dubai, UAE</span>
-                </div>
-              </div>
-            </div>
-            
-            {/* Follow Us Section */}
-            <div>
-              <h3 className="text-2xl font-bold mb-6">FOLLOW US</h3>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold text-secondary">in</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm text-secondary">⭐</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm text-secondary">📷</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold text-secondary">f</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm text-secondary">🎵</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold text-secondary">a</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold text-secondary">X</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm text-secondary">▶</span>
-                </div>
-                <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/30 transition-colors cursor-pointer">
-                  <span className="text-sm font-bold text-secondary">P</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
-            <div className="text-sm opacity-80">
-              Copyright Reserved © 2025 letsgetmoving.ca
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }
