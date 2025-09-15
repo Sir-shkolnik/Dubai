@@ -37,12 +37,16 @@ export default function ContactPage() {
     setSubmitStatus("idle");
 
     try {
+      const sessionId = localStorage.getItem("userSessionId") || "";
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          sessionId
+        }),
       });
 
       if (response.ok) {
