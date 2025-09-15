@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export const metadata: Metadata = {
   title: "Let's Get Moving — Dubai | Professional Movers",
@@ -51,6 +52,22 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="3pjVhCn5LIC2bT38H7sIGPPR8YQwrtOkiKOrsakr5gA" />
+        
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYW60LW7VV"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LYW60LW7VV');
+            `,
+          }}
+        />
+        
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
