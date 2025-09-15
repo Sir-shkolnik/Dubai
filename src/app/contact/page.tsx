@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -218,7 +219,7 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Contact Information */}
+            {/* Contact Information + Map */}
             <div className="space-y-8">
               <Card>
                 <CardHeader>
@@ -310,35 +311,24 @@ export default function ContactPage() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Why Choose Us?</CardTitle>
+                  <CardTitle className="text-2xl">Find Us on the Map</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-center space-x-3">
-                      <span className="text-green-500">✓</span>
-                      <span>Licensed & Insured in UAE</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <span className="text-green-500">✓</span>
-                      <span>Free quotes with no hidden fees</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <span className="text-green-500">✓</span>
-                      <span>Same-day estimates available</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <span className="text-green-500">✓</span>
-                      <span>Professional, trained crews</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <span className="text-green-500">✓</span>
-                      <span>Full packing and unpacking services</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <span className="text-green-500">✓</span>
-                      <span>Climate-controlled storage available</span>
-                    </li>
-                  </ul>
+                  <div className="h-80 w-full">
+                    {/** Dynamically import Mapbox component to avoid SSR issues */}
+                    {(() => {
+                      const MapboxMap = dynamic(() => import("@/components/MapboxMap"), { ssr: false });
+                      return (
+                        <MapboxMap
+                          latitude={25.242884}
+                          longitude={55.312402}
+                          zoom={14}
+                          className="h-80 w-full"
+                          markerLabel={"Let's Get Moving — Dubai"}
+                        />
+                      );
+                    })()}
+                  </div>
                 </CardContent>
               </Card>
             </div>
