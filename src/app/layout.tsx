@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
+import UserTracker from "@/components/UserTracker";
 
 export const metadata: Metadata = {
   title: "Let's Get Moving — Dubai | Professional Movers",
@@ -74,7 +75,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#1e40af" />
       </head>
       <body className="antialiased">
-        {children}
+        <UserTracker>
+          {children}
+        </UserTracker>
       </body>
     </html>
   );

@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
+import { userDataStorage, UserSession, FormSubmission } from "@/lib/userDataStorage";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, phone, email, moveDate, fromArea, toArea, message } = body;
+    const { name, phone, email, moveDate, fromArea, toArea, message, sessionId } = body;
 
     // Validate required fields
     if (!name || !phone) {
@@ -36,17 +37,52 @@ export async function POST(request: NextRequest) {
     // 3. Send notification to WhatsApp Business API
     // 4. Log the lead for follow-up
 
-    // For now, we'll just log the data (in production, replace with actual email service)
-    console.log("New contact form submission:", {
+    // Save user data to file system
+    const ip = request.ip || request.headers.get("x-forwarded-for") || "unknown";
+    const userAgent = request.headers.get("user-agent") || "unknown";
+    const referrer = request.headers.get("referer") || undefined;
+
+    const formSubmission: FormSubmission = {
+      formType: 'contact',
+      data: {
+        name,
+        phone,
+        email,
+        moveDate,
+        fromArea,
+        toArea,
+        message
+      },
+      timestamp: new Date().toISOString(),
+      success: true
+    };
+
+    // Create or update user session
+    const sessionData: Partial<UserSession> = {
+      sessionId: sessionId || userDataStorage.generateSessionId(),
+      ip,
+      userAgent,
+      referrer,
+      pages: [],
+      formSubmissions: [formSubmission],
+      interactions: [],
+      deviceInfo: {
+        type: 'desktop', // This would be detected from user agent in a real implementation
+        browser: 'unknown',
+        os: 'unknown'
+      }
+    };
+
+    await userDataStorage.updateSession(sessionData.sessionId!, sessionData);
+
+    // Log for debugging
+    console.log("New contact form submission saved:", {
+      sessionId: sessionData.sessionId,
       name,
       phone,
       email,
-      moveDate,
-      fromArea,
-      toArea,
-      message,
       timestamp: new Date().toISOString(),
-      ip: request.ip || request.headers.get("x-forwarded-for") || "unknown"
+      ip
     });
 
     // TODO: Replace with actual email service integration
